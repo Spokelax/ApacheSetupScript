@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Télécharger le fichier
-wget https://cdn.discordapp.com/attachments/712982120481554442/1096913796485885962/apache.zip
-
 # Installer unzip
 sudo apt-get update
 sudo apt-get install -y unzip
