@@ -12,8 +12,17 @@ if [ "$#" -eq 2 ]; then # Verifier s'il y a exactement deux arguments
             sudo systemctl stop apache2
 
             echo "Configuration d'Apache"
-            sudo htpasswd -c /etc/apache2/.htpasswd test <<< "1234"
-            sudo htpasswd /etc/apache2/.htpasswd test <<< "1234"
+
+            spawn sudo htpasswd -c /etc/apache2/.htpasswd test
+            
+            expect "New password:" # Expect password prompt
+            send "1234\r"          # Send password
+
+            expect "Re-type new password:" # Expect password confirmation prompt
+            send "1234\r"                  # Send password again
+
+            # Wait for process to finish
+            expect eof
             
             sudo mv 000-default.conf /etc/apache2/sites-enabled/000-default.conf
             sudo mv -v fichiers/* /var/www/html/
