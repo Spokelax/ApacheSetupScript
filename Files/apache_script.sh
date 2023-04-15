@@ -13,7 +13,7 @@ if [ "$#" -eq 2 ]; then # Verifier s'il y a exactement deux arguments
 
             echo "Configuration d'Apache"
 
-            sudo htpasswd -c /etc/apache2/.htpasswd test "1234"
+            sudo htpasswd -c /etc/apache2/.htpasswd test "$2"
             
             sudo mv 000-default.conf /etc/apache2/sites-enabled/000-default.conf
             sudo mv -v fichiers/* /var/www/html/
