@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Télécharger le fichier
-wget https://cdn.discordapp.com/attachments/712982120481554442/1096913796485885962/apache.zip
+wget https://github.com/Spokelax/ApacheSetupScript/raw/main/apache.zip
 
 # Installer unzip
 sudo apt-get update
