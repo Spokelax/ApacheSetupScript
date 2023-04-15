@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Télécharger le fichier
-https://github.com/Spokelax/ApacheSetupScript/raw/main/apache.zip
+wget https://github.com/Spokelax/ApacheSetupScript/raw/main/apache.zip
 
 # Installer unzip
 sudo apt-get update
