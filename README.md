@@ -40,7 +40,7 @@ During installation, a private directory called `private` will be created at the
 ## Removal
 
 To uninstall Apache, you can use the `apache_script` script with the uninstall option.<br>
-> Note : I forgot to remove the 2 arguments restriction for uninstallation, so because of lazyness i'm using an `x` varaible.
+> Note : I forgot to remove the 2 arguments restriction for uninstallation, so because of lazyness i'm using an `x` variable.
 
 ```bash
 bash apache_script uninstall x
